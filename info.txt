@@ -1,2 +1,4 @@
 Este repositorio es demostrativo.
 Sirve para ilustrar el uso de Git y GitHub.
+
+Es necesario tener Git en tu Computadora.
