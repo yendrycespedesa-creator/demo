@@ -8,7 +8,7 @@
 
     <title>Practica de Clase de Github</title> 
 
-    <style> 
+    <style>
         body { font-family: sans-serif; display: flex; justify-content: center;
         align-items: center; height: 100vh; background: #f0f2f5; transition: 0.3s; }
         .card { background: white; padding: 2rem; border-radius: 10px;
@@ -21,69 +21,43 @@
         #mensaje { margin-top: 15px; font-weight: bold; }
         #btnDarkMode { background: #343a40; margin-top: 10px; }
         #btnDarkMode:hover { background: #23272b; }
-
         body.dark { background: #121212; }
         body.dark .card { background: #1e1e1e; color: #f0f0f0;
         box-shadow: 0 4px 6px rgba(255,255,255,0.1); }
         body.dark input { background: #2c2c2c; color: #f0f0f0; border-color: #555; }
         body.dark #btnDarkMode { background: #f0f0f0; color: #121212; }
         body.dark #btnDarkMode:hover { background: #cccccc; }
-     </style> 
+    </style>
 
 </head> 
-
 <body> 
 
- 
 
-    <div class="card"> 
+    <div class="card">
+        <h2>Bienvenido</h2>
+        <p>Ingresa tu nombre para continuar</p>
+        <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre...">
+        <button id="btnSaludar">Saludar</button>
+        <div id="mensaje"></div>
 
-        <h2>Bienvenido</h2> 
-
-        <p>Ingresa tu nombre para continuar</p> 
-
-        <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre..."> 
-
-        <button id="btnSaludar">Saludar</button> 
-
-        <div id="mensaje"></div> 
-        
         <button id="btnDarkMode">Modo Oscuro</button>
-        
-    </div> 
+    </div>
 
- 
-
-    <script> 
-
+    <script>
         document.getElementById('btnSaludar').addEventListener('click', function() {
-         const nombre = document.getElementById('nombreUsuario').value;
-          const display = document.getElementById('mensaje');
-           if(nombre.trim() === "") {
-           display.innerText = "Por favor, escribe algo.";
-            display.style.color = "red";
-            } else {
-             display.innerText = "Hola, " + nombre + "! Exito en tu practica de Git.";
-             display.style.color = "green";
-             }
-             });
-             document.getElementById('btnDespedir').addEventListener('click', function() {
             const nombre = document.getElementById('nombreUsuario').value;
-           const display = document.getElementById('mensaje');
-          if(nombre.trim() === "") {
-         display.innerText = "Por favor, escribe tu nombre primero.";
-        display.style.color = "red";
-       } else {
-      display.innerText = "Hasta luego, " + nombre + "! Fue un placer.";
-     display.style.color = "blue";
-    }
-    });
-       document.getElementById('btnDarkMode').addEventListener('click', function() {
-        document.body.classList.toggle('dark');
-         this.innerText = document.body.classList.contains('dark')
-       ? 'Modo Claro' : 'Modo Oscuro';
-      });
-     </script> 
+            const display = document.getElementById('mensaje');
+            if (nombre.trim() === "") {
+                display.innerText = "Por favor, escribe algo.";
+                display.style.color = "red";
+            } else {
+
+        document.getElementById('btnDarkMode').addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            this.innerText = document.body.classList.contains('dark')
+                ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script> 
 
 </body> 
 
